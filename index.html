@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./assets/desktop/logo.svg"
+        alt="Pod logo"
+      />
+    </header>
+    <main>
+      <div class="hero__image"></div>
+      <article class="cta">
+        <h1 class="cta__heading">
+          Publish your podcasts <span>everywhere.</span>
+        </h1>
+        <p class="cta__copy">
+          Upload your audio to Pod with a single click. We’ll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </p>
+        <form class="cta__form">
+          <input
+            class="input"
+            type="email"
+            required
+            placeholder="Email address"
+          />
+          <span class="input__error"></span>
+          <button class="btn">Request Access</button>
+        </form>
+        <div class="cta__logos">
+          <img
+            class="cta__logo"
+            src="./assets/desktop/spotify.svg"
+            alt="Spotify logo"
+          />
+          <img
+            class="cta__logo"
+            src="./assets/desktop/apple-podcast.svg"
+            alt="Apple Podcasts logo"
+          />
+          <img
+            class="cta__logo"
+            src="./assets/desktop/google-podcasts.svg"
+            alt="Google Podcasts logo"
+          />
+          <img
+            class="cta__logo"
+            src="./assets/desktop/pocket-casts.svg"
+            alt="Pocket Casts logo"
+          />
+        </div>
+      </article>
+      <img class="dots" src="./assets/desktop/bg-pattern-dots.svg" alt="" />
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>

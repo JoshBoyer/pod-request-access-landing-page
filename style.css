@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setup Variables */
+:root {
+  /* --COLORS-- */
+  /* Main heading, primary button, image overlay */
+  --color-blue-green: hsl(157, 74%, 62%);
+  /* Primary button hover/focus state */
+  --color-blue-green-light: hsl(157, 100%, 85%);
+  /* Form input background */
+  --color-blue-grey: hsl(225, 26%, 23%);
+  /* Primary site background */
+  --color-black: hsl(224, 35%, 11%);
+  /* Form text and heading accent */
+  --color-white: hsl(0, 0%, 100%);
+  /* Company logos */
+  --color-blue-grey-light: hsl(225, 21%, 45%);
+  /* main copy */
+  --color-blue-grey-extra-light: hsl(225, 40%, 83%);
+  /* Form validation text */
+  --color-red: hsl(0, 96%, 61%);
+
+  /* --TYPOGRAPHY-- */
+  /* Base copy font 1.8rem (18px) */
+  --font-size: 10px;
+  /* Primary font Chivo (300, 400, 700, 900) */
+  --font-family: "Chivo", sans-serif;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+main {
+  width: 375px;
+  margin: 0 auto;
+}
+
+/* Setup default primary heading */
+h1 {
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+  font-weight: 300;
+  font-family: var(--font-family);
+  color: var(--color-blue-green);
+}
+
+/* Setup default copy */
+p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+  font-family: var(--font-family);
+  color: var(--color-blue-grey-extra-light);
+}
+
+.btn {
+  border: none;
+  border-radius: 2.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-family);
+  line-height: 2.8rem;
+  padding: 0.9rem 3.2rem;
+  background-color: var(--color-blue-green);
+}
+
+.input {
+  background-color: var(--color-blue-grey);
+  border: none;
+  border-radius: 2.8rem;
+  padding: 0.9rem 3.2rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+
+.input__error {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-red);
+  text-align: left;
+  padding-left: 3.2rem;
+  white-space: nowrap;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-blue-green-light);
+  cursor: pointer;
+}
+
+.hero__image {
+  background-color: var(--color-black);
+  background-image: url(./assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo {
+  margin-top: 6.2rem;
+  margin-bottom: 5.7rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 0 2.4rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.cta__heading {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  padding-bottom: 1.6rem;
+}
+
+.cta__heading span {
+  color: var(--color-white);
+}
+
+.cta__copy {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 3.3rem;
+}
+
+.cta__form {
+  order: 1;
+  display: flex;
+  flex-flow: column;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.cta__logos {
+  display: flex;
+  justify-content: space-between;
+  height: 1.55rem;
+  margin-bottom: 4.8rem;
+}
+
+.cta__logo {
+  filter: opacity(0.5);
+}
+
+.dots {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 768px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero__image {
+    background-image: url(./assets/tablet/image-host.jpg);
+    background-size: auto;
+    background-position: top right;
+    background-blend-mode: unset;
+    top: -258px;
+    height: 767px;
+    width: 100%;
+  }
+
+  .header {
+    justify-content: flex-start;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .header__logo {
+    margin-top: 5rem;
+    margin-bottom: 15.2rem;
+    margin-left: 3.9rem;
+  }
+
+  .cta {
+    background-color: var(--color-black);
+    text-align: left;
+    width: 635px;
+    height: 509px;
+    padding: 0;
+    margin-left: 3.4rem;
+  }
+
+  .cta__heading {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    padding-top: 9.3rem;
+    padding-bottom: 3.1rem;
+  }
+
+  .cta__copy {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    padding-bottom: 4rem;
+    width: 40ch;
+  }
+  .cta__form {
+    order: 0;
+    display: unset;
+    flex-flow: unset;
+    gap: unset;
+    padding-bottom: 4.4rem;
+  }
+
+  .btn {
+    line-height: 2.8rem;
+    padding: 0.9rem 3.2rem;
+    position: absolute;
+    top: 5px;
+    left: 250px;
+  }
+
+  .input {
+    width: 427px;
+    padding: 1.4rem 2.7rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+  }
+
+  .input__error {
+    padding-left: 3.2rem;
+    padding-top: 0.8rem;
+  }
+
+  .cta__logos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 4rem;
+    height: 2.3rem;
+    margin-bottom: 0;
+  }
+
+  .dots {
+    display: unset;
+    margin-top: 15.3rem;
+    margin-left: 3.4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    width: 1440px;
+  }
+
+  .hero__image {
+    background-image: url(./assets/desktop/image-host.jpg);
+    top: -131px;
+    height: 640px;
+  }
+
+  .header {
+    width: 1440px;
+  }
+
+  .header__logo {
+    margin-top: 10.2rem;
+    margin-bottom: 10.3rem;
+    margin-left: 16.5rem;
+  }
+
+  .cta {
+    width: 723px;
+    margin-left: 16.5rem;
+  }
+
+  .cta__heading {
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+    padding-top: 8.8rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .dots {
+    margin-top: -5.2rem;
+    float: right;
+  }
+}
